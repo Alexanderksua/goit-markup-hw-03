@@ -386,7 +386,7 @@ body {
 /* BUTTONS */
 /* Стилизация кнопок Фильтра (без неведения курсора) */
 .btn {
-      padding: 6px 25px;
+      padding: 6px 22px;
       border-width: 0px;
       border-radius: 4px;
 
@@ -459,8 +459,6 @@ body {
 }
 
 /* Внешний Отступ снизу от карточки до Футера */
-
-
 
 /* Стилизация Заголовка Карточки */
 .cards-item-title {
