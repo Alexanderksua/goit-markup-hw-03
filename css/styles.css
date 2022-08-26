@@ -177,17 +177,6 @@ body {
       background-color: var(--gray);
 }
 
-.container-f {
-      width: 1230px;
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: auto;
-      margin-right: auto;
-      /* outline: 2px dashed green; */
-      text-align: left;
-}
-
-
 .footer-logo {
       display: block;
       /* padding-top: 60px; */
