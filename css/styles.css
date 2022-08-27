@@ -2,11 +2,11 @@ html {
       box-sizing: border-box;
 }
 
-/* *,
+*,
 *::before,
 *::after {
       box-sizing: inherit;
-} */
+}
 
 /* Глобальный сброс Внешних\Внутренних Отступов 
       Заголовков, Абзацев и Ненумерованных Списков */
@@ -26,6 +26,7 @@ ul {
       --gray: #2f303a;
       --light-gray: #757575;
       --blue: #2196f3;
+      --blue-btn-active: #188CE8;
       --light-white: #ffffff;
       --white-card-p: #eeeeee;
       --white-br-bottom: #ececec;
@@ -41,6 +42,13 @@ body {
       font-family: 'Roboto', 'Sans Serif';
 }
 
+
+
+.padd-top-botm {
+      padding-top: 94px;
+      padding-bottom: 94px;
+}
+
 /*
 «B7» Создан общий вспомогательный класс .container для центрирования и ограничения контента по ширине.
 «B8» Ширина «контейнера» соответствует макету и равна 1200px. 
@@ -52,6 +60,7 @@ body {
       padding-right: 15px;
       margin-left: auto;
       margin-right: auto;
+      outline: 1px dashed red;
 }
 
 /* Отключаем настройки оформления списков по умолчанию*/
@@ -176,7 +185,7 @@ body {
 }
 
 .footer-logo {
-      display: block;
+      display: inline-block;
       margin-bottom: 20px;
       color: var(--light-white);
 }
@@ -206,6 +215,16 @@ body {
 
 
 /* INDEX */
+/* Единая стилизация Заголовков Секций */
+.title-style {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+}
+
 /* Центрирование по горизонтали элементов раздела "ГЕРОЙ" */
 .hero {
       background-color: var(--gray);
@@ -247,16 +266,20 @@ body {
       cursor: pointer;
 }
 
+.btn-hero:hover,
+.btn-hero:focus {
+      background-color: var(--blue-btn-active);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 /* Качества Студии */
 .qualites {
-      padding-top: 94px;
-      padding-bottom: 94px;
       justify-content: center;
 }
 
-.qualites-list>.qualites-list-item {
-      width: 270px;
 
+.qualites-list>.qualites-list-item {
+      width: calc((100% - (3 * 30px)) / 4);
 }
 
 .qualites-list>.qualites-list-item:not(:last-child) {
@@ -277,18 +300,9 @@ body {
       line-height: calc(24 / 14);
       letter-spacing: 0.03em;
       color: var(--light-gray);
-      /* margin-bottom: 94px; */
 }
 
 /* Виды деятельности Студии */
-.features-title {
-      font-weight: 700;
-      font-size: 36px;
-      line-height: calc(42 / 36);
-      text-align: center;
-      letter-spacing: 0.03em;
-      margin-bottom: 50px;
-}
 
 /* Автоматический внешний отступ справа для всех элементов списка*/
 .features-list>.features-list-item:nth-child(n) {
@@ -301,6 +315,7 @@ body {
 }
 
 .features {
+      padding-top: 0;
       padding-bottom: 94px;
 }
 
@@ -308,35 +323,23 @@ body {
 
 /* Стилизация Заголовка раздела "Наша Команда" */
 .team {
-      padding-top: 94px;
-      padding-bottom: 94px;
       background-color: var(--ligth-gray-bkgr-team);
 }
 
-.team-title {
-      font-weight: 700;
-      font-size: 36px;
-      line-height: calc(42 / 36);
-      text-align: center;
-      letter-spacing: 0.03em;
-
-      margin-bottom: 50px;
+/* Оступы между текстом карточки и сторонами */
+.team-card-text {
+      padding-top: 30px;
+      padding-bottom: 30px;
 }
 
 /* Стилизация "карточки члена команды" раздела "Наша Команда" */
 .team-list-item {
-      width: 270px;
+      width: calc((100% - (3 * 30px)) / 4);
       background: var(--light-white);
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
             0px 1px 1px rgba(0, 0, 0, 0.14),
             0px 2px 1px rgba(0, 0, 0, 0.2);
       border-radius: 0px 0px 4px 4px;
-      /* margin-bottom: 94px; */
-}
-
-/* Отступ от фотографии */
-.team-list img {
-      margin-bottom: 30px;
 
 }
 
@@ -357,7 +360,7 @@ body {
       text-align: center;
       letter-spacing: 0.03em;
       color: var(--light-gray);
-      margin-bottom: 30px;
+
 }
 
 /* Автоматический внешний отступ справа для всех элементов списка*/
@@ -405,7 +408,6 @@ body {
 /* Положение Кнопок в Центре Контейнера и Внешний отступ сверху от Хедера*/
 .list.buttons {
       justify-content: center;
-      /* margin-top: 94px; */
       margin-bottom: 50px;
 }
 
@@ -424,32 +426,27 @@ body {
 
 
 /* CARDS */
-.portfolio {
-      padding-top: 94px;
-      padding-bottom: 94px;
-}
 
-/* Размер карточки */
-.cards-item {
-      width: 370px;
-      background: var(--light-white);
-      border: 1px solid var(--white-card-p);
-}
+
 
 /* Автоматический размещение всех элементов списка */
 .list.cards {
-      width: 1200px;
-
-
+      /* width: 1200px; */
       margin-left: auto;
       margin-right: auto;
-
 }
 
 .list.cards {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
+}
+
+/* Размер карточки */
+.cards-item {
+      width: calc((100% - (2 * 30px)) / 3);
+      background: var(--light-white);
+
 }
 
 /* Внешний Отступ снизу от карточки до Футера */
@@ -476,7 +473,11 @@ body {
 /* Внутренний Отступ от края карточки её Заголовка и Текста */
 .card-text-content {
       padding: 20px 24px;
+      border-left: 1px solid var(--white-card-p);
+      border-right: 1px solid var(--white-card-p);
+      border-bottom: 1px solid var(--white-card-p);
 }
+
 /* Отступ вертикальный между Заголовком и Текстом в карточке */
 .cards-item h2 {
       margin-bottom: 4px;
