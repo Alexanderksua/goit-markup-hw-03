@@ -60,7 +60,7 @@ body {
       padding-right: 15px;
       margin-left: auto;
       margin-right: auto;
-      outline: 1px dashed red;
+      /* outline: 1px dashed red; */
 }
 
 /* Отключаем настройки оформления списков по умолчанию*/
